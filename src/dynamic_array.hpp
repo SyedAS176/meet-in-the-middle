@@ -1,6 +1,6 @@
 //  Since we are not allowed to use a dynamic array
 //  We will just implement our own dynamic array
-//  And resize it when it fills up
+//  And resize it when it fills up sort of like a vector
 
 #pragma once
 
