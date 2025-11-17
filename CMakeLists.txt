@@ -15,7 +15,22 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(Catch2)
 
-add_executable(hello_test tests/hello_test.cpp src/hello.cpp)
-add_executable(main main.cpp src/hello.cpp)
+add_executable(median_test
+        tests/median_test.cpp
+        src/dynamic_array.cpp
+        src/dynamic_array.hpp
+        src/median.cpp
+        src/median.hpp
+)
 
-target_link_libraries(hello_test PRIVATE Catch2::Catch2WithMain)
+add_executable(main main.cpp
+        src/dynamic_array.cpp
+        src/dynamic_array.hpp
+        src/median.cpp
+        src/median.hpp
+        tests/median_test.cpp
+        tests/dynamic_array_test.cpp
+)
+
+
+target_link_libraries(median_test PRIVATE Catch2::Catch2WithMain)
